@@ -1,0 +1,160 @@
+/* Minimal properties */
+.bold {
+	font-weight: bold;
+}
+.no-deco {
+	text-decoration: none;
+	color: inherit;
+}
+
+/*General*/
+body {
+	background-color: #f1f1f1;
+	min-height: 100%;
+	margin: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+	color: #000;
+}
+hr {
+	border: none;
+	border-top: 1px solid rgba(0,0,0,0.3);
+	width: 80%;
+	margin: 20px 10%;
+}
+
+a {
+	color: #66AD66;
+}
+
+/* Header */
+header {
+	padding: 0 50px;
+	height: 75px;
+	border-bottom: 1px groove #444;
+}
+
+header h1 {
+	font-size: 2.5em;
+	margin: 0px 10px;
+	display: inline-block;
+}
+
+header .logo {
+	position: relative;
+	top: 5px;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+
+}
+
+header #account_bar {
+	position: absolute;
+	right: 50px;
+	top: 30px;
+	display: inline-block;
+}
+
+/* Footer */
+footer {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 5px;
+	text-align: center;
+}
+
+/* Title */
+h1 {
+	font-family: 'Glegoo', serif;
+	font-size: 2em;
+}
+
+/* Form */
+form {
+	width: 70%;
+	margin: 0 15%;
+	text-align: center;
+}
+
+/* Buttons */
+.submit-btn {
+	padding: 10px 20px;
+	background-color: #35d0f0;
+	border: none;
+	color: #fff;
+	border-radius: 3px;
+}
+
+.submit-btn:hover {
+	cursor: pointer;
+	transform: scale(0.95);
+}
+
+/* Home block */
+#home-block {
+	position: absolute;
+	width: 400px;
+	height: 150px;
+	top: calc(50% - 150px);
+	left: calc(50% - 200px);
+	text-align: center;
+	background-color: #fff;
+	border: 1px solid #444;
+	transition: 0.1s ease-in-out;
+}
+
+#home-block:hover {
+	cursor: pointer;
+}
+
+#home-block:active {
+	transform: scale(0.95);
+}
+
+/* Block */
+.no-color-block {
+	padding: 10px;
+	text-align: center;
+}
+
+.block {
+	background-color: #fff;
+	border: 1px solid #444;
+	padding: 10px;
+	text-align: center;
+}
+.tiny-block {
+	width: 30%;
+	margin: 20px 35%;
+}
+.small-block {
+	width: 50%;
+	margin: 20px 25%;
+}
+.basic-block {
+	width: 60%;
+	margin: 20px 20%;
+}
+.medium-block {
+	width: 75%;
+	margin: 20px 7.5%;
+}
+.big-block {
+	width: 90%;
+	margin: 20px 5%;
+}
+
+/* Table */
+
+table {
+	margin: auto;
+	margin-bottom: 50px;
+	background-color: #fff;
+	border-collapse: collapse
+}
+table td, table th {
+	padding: 5px 15px;
+	border: 1px solid #777;
+}
