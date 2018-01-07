@@ -9,6 +9,8 @@
         <!-- Font -->
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Glegoo" rel="stylesheet">
+        <!-- Fontawesome -->
+        <script src="./View/js/fontawesome-all.min.js"></script>
         <!-- Icon -->
         <link href="./View/img/bonsai.png" rel="icon">
     </head>

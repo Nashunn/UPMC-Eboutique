@@ -10,7 +10,7 @@ class Connection {
         $this->host = 'localhost';
         $this->dbname = 'eboutique';
         $this->username = 'root';
-        $this->password = '';
+        $this->password = 'mysql';
         try {
             $this->db = new PDO('mysql:host=' . $this->host . ';dbname=' . $this->dbname . ';charset=utf8', $this->username, $this->password);
         }
