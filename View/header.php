@@ -1,9 +1,9 @@
 <header>
     <div id="banner-bloc">
         <a href="./index.php" class="no-deco center">
-            <img class="banner" src="./View/img/banniere.png" title="Ecosphere" alt="website banner">
-            <h1>Ecosphere</h1>
+            <img class="banner" src="./View/img/banniere.png" title="Homepage" alt="website banner">
         </a>
+        <h1>Ecosphere</h1>
     </div>
 
     <div id="account_bar">
@@ -23,10 +23,10 @@
     </div>
 
     <ul id="menu_bar">
-        <a href="#" class="no-deco"><li>Menu 1</li></a>
-        <a href="#" class="no-deco"><li>Menu 2</li></a>
-        <a href="#" class="no-deco"><li>Menu 3</li></a>
-        <a href="#" class="no-deco"><li>Menu 4</li></a>
-        <a href="#" class="no-deco"><li>Menu 5</li></a>
+        <a href="#" class="no-deco"><li>Trees</li></a>
+        <a href="#" class="no-deco"><li>Plants</li></a>
+        <a href="#" class="no-deco"><li>Bouquets</li></a>
+        <a href="#" class="no-deco"><li>Seeds</li></a>
+        <a href="#" class="no-deco"><li>Fruits</li></a>
     </ul>
 </header>
