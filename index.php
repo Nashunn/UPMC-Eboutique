@@ -12,7 +12,7 @@
         <!-- Fontawesome -->
         <script src="./View/js/fontawesome-all.min.js"></script>
         <!-- Icon -->
-        <link href="./View/img/bonsai.png" rel="icon">
+        <link href="./View/img/icon.png" rel="icon">
     </head>
     <body>
     <?php
