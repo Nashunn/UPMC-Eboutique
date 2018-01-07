@@ -12,10 +12,13 @@
 .no-margin {
 	margin: 0;
 }
+.padding-left-10px {
+	padding-left: 10px;
+}
 
 /*General*/
 body {
-	background-color: #efefef;
+	background-color: #e8e8e8;
 	min-height: 100%;
 	margin: 0;
 	font-family: 'Source Sans Pro', sans-serif;

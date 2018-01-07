@@ -1,3 +1,4 @@
+<!-- Monthly box -->
 <div id="monthly-box">
     <h2>Monthly Box</h2>
     <h3 class="no-margin">of <?php echo date('F'); ?></h3>
@@ -27,3 +28,52 @@
 <form class="center" action="./bag.php" method="POST">
     <input type="submit" class="submit-btn margin-auto" value="I want a box !">
 </form>
+<!-- End Monthly Box -->
+
+<div id="newItems">
+    <h2 class="padding-left-10px">New & Fresh</h2>
+    <div class="content">
+        <div class="item">
+            <img src="./View/img/tree.png" class="logo" alt="logo">
+            <div class="text">Name of the tree</div>
+            <div class="price">70$</div>
+            <a href="./basket?ctrl=basket&action=add&id=#" class="no-deco"><div class="add-btn">Add to my basket</div></a>
+        </div>
+        <div class="item">
+            <img src="./View/img/flower.png" class="logo" alt="logo">
+            <div class="text">Name of the plant</div>
+            <div class="price">10$</div>
+            <a href="./basket?ctrl=basket&action=add&id=#" class="no-deco"><div class="add-btn">Add to my basket</div></a>
+        </div>
+        <div class="item">
+            <img src="./View/img/seeds.png" class="logo" alt="logo">
+            <div class="text">Name of the seeds</div>
+            <div class="price">2$</div>
+            <a href="./basket?ctrl=basket&action=add&id=#" class="no-deco"><div class="add-btn">Add to my basket</div></a>
+        </div>
+        <div class="item">
+            <img src="./View/img/flower.png" class="logo" alt="logo">
+            <div class="text">Name of the plant</div>
+            <div class="price">13$</div>
+            <a href="./basket?ctrl=basket&action=add&id=#" class="no-deco"><div class="add-btn">Add to my basket</div></a>
+        </div>
+        <div class="item">
+            <img src="./View/img/bouquet.png" class="logo" alt="logo">
+            <div class="text">Name of the bouquet</div>
+            <div class="price">15$</div>
+            <a href="./basket?ctrl=basket&action=add&id=#" class="no-deco"><div class="add-btn">Add to my basket</div></a>
+        </div>
+        <div class="item">
+            <img src="./View/img/fruits.png" class="logo" alt="logo">
+            <div class="text">Name of the fruit</div>
+            <div class="price">5$</div>
+            <a href="./basket?ctrl=basket&action=add&id=#" class="no-deco"><div class="add-btn">Add to my basket</div></a>
+        </div>
+        <a href="./articles?ctrl=articles&action=consultAll&filter=all" class="no-deco" title="More items">
+            <div class="consultAll">
+            <img src="./View/img/suspend.png" class="logo" alt="logo">
+            <div class="text">More</div>
+            </div>
+        </a>
+    </div>
+</div>

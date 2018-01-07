@@ -1,7 +1,7 @@
 /* Header */
 header {
     position: relative;
-    height: 250px;
+    height: 230px;
     margin-bottom: 50px;
     padding: 0 50px;
     padding-bottom: 20px;
@@ -23,6 +23,27 @@ header #banner-bloc h1 {
     bottom: 170px;
     margin: 0;
     text-shadow: 0px 0px 3px #fff;
+}
+
+/* Info bar */
+#info-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 25px;
+    padding-top: 0;
+    height: 150px;
+    width: 30%;
+    color: #2e6e3f;
+    text-shadow: 0 0 5px rgba(68, 68, 68, 0.3);
+    font-family: 'Nunito', sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+    #info-bar {
+        padding-left: 5px;
+        width: 20%;
+    }
 }
 
 /* Account bar */
@@ -53,6 +74,8 @@ header #banner-bloc h1 {
 
 #account_bar .nb-items {
     position: absolute;
+    margin-left: 35px;
+    margin-top: -10px;
     width: 20px;
     height: 20px;
     background-color: #66AD66;
@@ -85,11 +108,11 @@ header #banner-bloc h1 {
     text-align: center;
     font-size: 1.2em;
     color: #000;
-    border-bottom: 2.5px solid transparent;
+    border-bottom: 3px groove #7fd780;
 }
 
 #menu_bar li:hover {
-    border-bottom: 2.5px solid #66AD66;
+    border-bottom: 3px solid #66AD66;
 }
 
 /* Footer */
@@ -101,4 +124,8 @@ footer {
     padding-top: 20px;
     text-align: center;
     box-shadow: 0 -18px 10px -19px gray;
+}
+
+footer>p {
+    margin-top: 5px;
 }

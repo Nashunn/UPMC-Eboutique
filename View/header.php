@@ -1,6 +1,10 @@
 <header>
+    <div id="info-bar">
+        <p>The first platform of ECO-MMERCE</p>
+    </div>
+
     <div id="banner-bloc">
-        <a href="./index.php" class="no-deco center">
+        <a href="./" class="no-deco center">
             <img class="banner" src="./View/img/banniere.png" title="Homepage" alt="website banner">
         </a>
         <h1>Ecosphere</h1>
@@ -17,7 +21,7 @@
             <a href="#" class="no-deco">
                 <div class="nb-items">2</div>
                 <i class="fas fa-shopping-bag"></i>
-                <div class="text">My bag</div>
+                <div class="text">My basket</div>
             </a>
         </div>
     </div>

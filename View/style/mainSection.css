@@ -5,7 +5,7 @@
 
 /* Monthly box */
 #monthly-box {
-    width: 50%;
+    width: 60%;
     min-height: 400px;
     margin: 50px auto;
     margin-bottom: 10px;
@@ -14,6 +14,7 @@
     background-position: center;
     background-size: cover;
     text-align: center;
+    cursor: default;
 }
 
 #monthly-box h2 {
@@ -74,4 +75,62 @@
     #monthly-box {
         width: 90%;
     }
+}
+
+/* New items */
+#newItems {
+    width: 90%;
+    margin: 10px auto;
+}
+
+#newItems .item, #newItems .consultAll {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    display: inline-block;
+    width: 200px;
+    height: 250px;
+    margin: 10px;
+    background: #fff;
+}
+
+#newItems .consultAll {
+    position: relative;
+    bottom: 50px;
+}
+
+#newItems .item .logo, #newItems .consultAll .logo {
+    width: 130px;
+    height: 130px;
+    margin: 35px;
+    margin-bottom: 5px;
+}
+
+#newItems .item>.text, #newItems .item>.price, #newItems .consultAll>.text {
+    width: 150px;
+    margin: auto;
+    text-align: center;
+}
+
+#newItems .item>.price {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#newItems .item>a>.add-btn {
+    display: flex;
+    justify-content:space-around;
+    flex-flow: column wrap;
+    height: 30px;
+    text-align: center;
+    color: #fff;
+    background: #2e6e3f;
+    background: -moz-linear-gradient(top, #3F753D 0%, #146444 100%);
+    background: -webkit-linear-gradient(top, #3F753D 0%,#146444 100%);
+    background: linear-gradient(to bottom, #3F753D 0%,#146444 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e6e3f', endColorstr='#0f3f29',GradientType=0 );
+}
+
+#newItems .item>a>.add-btn:hover {
+    text-decoration: underline;
 }
