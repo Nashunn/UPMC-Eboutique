@@ -12,6 +12,27 @@
 .no-margin {
 	margin: 0;
 }
+.margin-auto {
+	margin: auto;
+}
+margin-5 {
+	margin: 5%;
+}
+.margin-side-5 {
+	margin: 0 5%;
+}
+margin-10 {
+	margin: 10%;
+}
+.margin-side-10 {
+	margin: 0 10%;
+}
+margin-25 {
+	margin: 25%;
+}
+.margin-side-25 {
+	margin: 0 25%;
+}
 .padding-left-10px {
 	padding-left: 10px;
 }
@@ -74,4 +95,36 @@ table {
 table td, table th {
 	padding: 5px 15px;
 	border: 1px solid #777;
+}
+
+/* Wrappers */
+.wrapper-90 {
+	width: 90%;
+	padding: 10px;
+}
+.wrapper-50 {
+	width: 50%;
+	padding: 10px;
+}
+
+/* Forms */
+.form textarea, .form input[type="text"], .form input[type="password"], .form input[type="email"], .form input[type="file"] {
+	width: 60%;
+	padding: 5px 15px;
+	margin-bottom: 10px;
+	background: #fff;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 15px;
+	border-radius: 2px;
+	border: 1px solid #a4a4a4;
+	color: #333;
+}
+
+.form textarea:focus, .form input[type="text"]:focus, .form input[type="password"]:focus, .form input[type="email"]:focus, .form input[type="file"] {
+	border: 1px solid #707070;
+}
+
+.form textarea {
+	resize: vertical;
+	height: 150px;
 }

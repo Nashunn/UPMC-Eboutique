@@ -1,3 +1,12 @@
+<?php if(isset($_SESSION['user']) && isset($admin) && $admin==true) { ?>
+<!-- Admin Management -->
+<div id="admin-box">
+    <h2>Administration Panel</h2>
+    <a href="./index.php?ctrl=admin&action=panel" class="submit-btn no-deco">Consult panel</a>
+</div>
+<!-- End of the Admin Management -->
+<?php } ?>
+
 <!-- Monthly box -->
 <div id="monthly-box">
     <h2>Monthly Box</h2>

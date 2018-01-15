@@ -3,6 +3,16 @@
 
 }
 
+/* Admin Panel */
+#admin-box {
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    padding-bottom: 25px;
+    text-align: center;
+    border: 1px solid #146444;
+}
+
 /* Monthly box */
 #monthly-box {
     width: 60%;

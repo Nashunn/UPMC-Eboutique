@@ -1,5 +1,8 @@
 <?php
 class basketController {
+    public function __construct($db) {
+        $this->db = $db;
+    }
 
     /**
      * Display the basket of an user

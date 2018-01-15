@@ -11,19 +11,37 @@
     </div>
 
     <div id="account_bar">
+        <?php if(isset($_SESSION['user'])) { ?>
         <div class="connection center">
-            <a href="./index.php?ctrl=user&action=login" class="no-deco">
+            <a href="./index.php?ctrl=user&action=logout" class="no-deco" title="Logout account">
                 <i class="fas fa-user"></i>
-                <div class="text">Login</div>
+                <div class="text">Logout</div>
             </a>
         </div>
-        <div class="bag center">
-            <a href="./index.php?ctrl=basket&action=consult" class="no-deco">
-                <div class="nb-items">2</div>
+        <div class="basket center">
+            <a href="./index.php?ctrl=basket&action=consult" class="no-deco" title="Consult your basket">
+                <?php
+                    $nbItems = -1;
+                    if(isset($_SESSION['user']['basket'])) {
+                        $nbItems = count($_SESSION['user']['basket']);
+                    }
+
+                    if($nbItems>0) {
+                        ?><div class="nb-items"><?php echo $nbItems; ?></div><?php
+                    }
+                ?>
                 <i class="fas fa-shopping-bag"></i>
                 <div class="text">My basket</div>
             </a>
         </div>
+        <?php } else { ?>
+        <div class="connection center">
+            <a href="./index.php?ctrl=user&action=login" class="no-deco" title="Login or create account">
+                <i class="fas fa-user"></i>
+                <div class="text">Login</div>
+            </a>
+        </div>
+        <?php } ?>
     </div>
 
     <ul id="menu_bar">

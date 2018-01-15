@@ -1,5 +1,11 @@
 <?php
 class productController {
+    private $userManager;
+    private $db;
+
+    public function __construct($db) {
+        $this->db = $db;
+    }
 
     /**
      * Display all products in db

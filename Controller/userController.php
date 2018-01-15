@@ -31,7 +31,7 @@ class userController {
         }
 
         if($result) {
-            $_SESSION['user'] = $result['email'];
+            $_SESSION['user'] = array("user"=>$result['email'], "basket"=>array());
             $page = 'home';
         }
         else {
@@ -39,6 +39,7 @@ class userController {
             $page = 'login';
         }
 
+        header("Location: ./");
         require('./View/default.php');
     }
 
@@ -57,7 +58,7 @@ class userController {
      * Dissplay the interface to create an user
      */
     public function create() {
-        $page = 'create';
+        $page = 'createAccount';
 
         require('./View/default.php');
     }
@@ -86,29 +87,6 @@ class userController {
                 $error = "ERROR : This email (".$_POST['email'].") is used by another user";
                 $page = 'create';
             }
-        }
-
-        require('./View/default.php');
-    }
-
-    /**
-     * List all users
-     */
-    public function listUser() {
-        $user = $this->userManager->findByEmail($_SESSION['user']);
-
-        if($user) {
-            if($user['admin'] == 1) {
-                $page = 'listUser';
-                $usersList = $this->userManager->findAll();
-                $usersNb = $this->userManager->countAll();
-            }
-            else {
-                header("Location: ./index.php?ctrl=user&action=unauthorized");
-            }
-        }
-        else {
-            header("Location: ./index.php?ctrl=user&action=unauthorized");
         }
 
         require('./View/default.php');
