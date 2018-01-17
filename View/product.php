@@ -7,7 +7,7 @@ if(isset($listProducts) && !empty($listProducts)) {
             <img src="<?php echo $item['imgLink']; ?>" class="logo" alt="logo">
             <div class="text"><?php echo $item['name']; ?></div>
             <div class="price"><?php echo $item['price']; ?> $</div>
-            <a href="./index.php?ctrl=basket&action=add" class="no-deco"><div class="add-btn">Add to my basket</div></a>
+            <a href="./index.php?ctrl=basket&action=add&id=<?php echo $item['id']; ?>" class="no-deco"><div class="add-btn">Add to my basket</div></a>
         </div>
         <?php
     }

@@ -74,7 +74,9 @@ class productController {
      * Display all products in db
      */
     public function all() {
-        $page = 'allProduct';
+        $page = 'product';
+
+        $listProducts = $this->productManager->getAllProducts();
 
         require('./View/default.php');
     }

@@ -18,7 +18,17 @@ class basketController {
      */
     public function add() {
         $page = 'basket';
-        $product = 'TODO';
+        $product = $_GET['id'];
+
+        require('./View/default.php');
+    }
+
+    /**
+     * Add a box to the basket
+     */
+    public function addBox() {
+        $page = 'basket';
+        $product = 'box';
 
         require('./View/default.php');
     }

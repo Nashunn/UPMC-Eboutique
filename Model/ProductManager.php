@@ -65,4 +65,21 @@ class ProductManager {
 
         return $result;
     }
+
+    // Return an array of all products
+    public function getAllProducts() {
+        $result = array();
+
+        $req = $this->db->prepare (
+            'SELECT *
+            FROM product
+            ORDER BY id DESC
+        ');
+
+        $req->execute();
+
+        $result = $req->fetchAll(); //get all
+
+        return $result;
+    }
 }

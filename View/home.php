@@ -34,7 +34,7 @@
 
     <div class="secret">+ 1 secret item !</div>
 </div>
-<form class="center" action="./basket?ctrl=basket&action=add&id=#" method="POST">
+<form class="center" action="./index.php?ctrl=basket&action=addBox" method="POST">
     <input type="submit" class="submit-btn margin-auto" value="I want a box !">
 </form>
 <!-- End Monthly Box -->
@@ -52,7 +52,7 @@
                     <img src="<?php echo $item['imgLink']; ?>" class="logo" alt="logo">
                     <div class="text"><?php echo $item['name']; ?></div>
                     <div class="price"><?php echo $item['price']; ?> $</div>
-                    <a href="./index.php?ctrl=basket&action=add" class="no-deco"><div class="add-btn">Add to my basket</div></a>
+                    <a href="./index.php?ctrl=basket&action=add&id=<?php echo $item['id']; ?>" class="no-deco"><div class="add-btn">Add to my basket</div></a>
                 </div>
                 <?php
             }
