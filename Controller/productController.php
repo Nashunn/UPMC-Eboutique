@@ -44,7 +44,7 @@ class productController {
      * Return the url of the image of a product by his type
      */
     private function getImgProduct($type) {
-        $result = "../View/img/";
+        $result = "./View/img/";
 
         switch ($type) {
             case "tree":

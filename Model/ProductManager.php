@@ -36,6 +36,7 @@ class ProductManager {
         $req = $this->db->prepare(
             'SELECT *
             FROM product
+            ORDER BY id DESC
             LIMIT 5'
         );
 

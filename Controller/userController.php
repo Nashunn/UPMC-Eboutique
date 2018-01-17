@@ -33,13 +33,13 @@ class userController {
         if($result) {
             $_SESSION['user'] = array("user"=>$result['email'], "basket"=>array());
             $page = 'home';
+            header("Location: ./");
         }
         else {
             $error = "ERROR : login or password incorrect !";
             $page = 'login';
         }
 
-        header("Location: ./");
         require('./View/default.php');
     }
 
