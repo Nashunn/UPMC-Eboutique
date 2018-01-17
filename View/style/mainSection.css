@@ -83,18 +83,18 @@
 }
 
 /* New items */
-#newItems {
+#newItems, #product-box {
     width: 90%;
     margin: 10px auto;
 }
 
-#newItems>.content {
+#newItems>.content, #product-box>.content {
     display: flex;
     justify-content: flex-start;
     flex-flow: row wrap;
 }
 
-#newItems .item, #newItems .all-product {
+#newItems .item, #newItems .all-product, #product-box .item {
     display: flex;
     justify-content: flex-start;
     flex-flow: row wrap;
@@ -112,25 +112,25 @@
     display: inline-block;
 }
 
-#newItems .item .logo, #newItems .consultAll .logo {
+#newItems .item .logo, #newItems .consultAll .logo, #product-box .item .logo {
     width: 130px;
     height: 130px;
     margin: 35px;
     margin-bottom: 5px;
 }
 
-#newItems .item>.text, #newItems .item>.price, #newItems .consultAll>.text {
+#newItems .item>.text, #newItems .item>.price, #newItems .consultAll>.text, #product-box .item>.text, #product-box .item>.price {
     width: 150px;
     margin: auto;
     text-align: center;
 }
 
-#newItems .item>.price {
+#newItems .item>.price, #product-box .item>.price {
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-#newItems .item>a>.add-btn {
+#newItems .item>a>.add-btn, #product-box .item>a>.add-btn {
     display: flex;
     justify-content:space-around;
     flex-flow: column wrap;
@@ -144,6 +144,6 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e6e3f', endColorstr='#0f3f29',GradientType=0 );
 }
 
-#newItems .item>a>.add-btn:hover {
+#newItems .item>a>.add-btn:hover, #product-box .item>a>.add-btn {
     text-decoration: underline;
 }

@@ -84,7 +84,9 @@ class productController {
      */
     public function trees() {
         $page = 'product';
-        $product = 'tree';
+        $type = 'tree';
+
+        $listProducts = $this->productManager->getProductByType($type);
 
         require('./View/default.php');
     }
@@ -94,7 +96,9 @@ class productController {
      */
     public function seeds() {
         $page = 'product';
-        $product = 'seed';
+        $type = 'seed';
+
+        $listProducts = $this->productManager->getProductByType($type);
 
         require('./View/default.php');
     }
@@ -104,7 +108,9 @@ class productController {
      */
     public function plants() {
         $page = 'product';
-        $product = 'plants';
+        $type = 'plant';
+
+        $listProducts = $this->productManager->getProductByType($type);
 
         require('./View/default.php');
     }
@@ -114,7 +120,9 @@ class productController {
      */
     public function bouquets() {
         $page = 'product';
-        $product = 'bouquet';
+        $type = 'bouquet';
+
+        $listProducts = $this->productManager->getProductByType($type);
 
         require('./View/default.php');
     }
@@ -124,7 +132,9 @@ class productController {
      */
     public function fruits() {
         $page = 'product';
-        $product = 'fruits';
+        $type = 'fruit';
+
+        $listProducts = $this->productManager->getProductByType($type);
 
         require('./View/default.php');
     }

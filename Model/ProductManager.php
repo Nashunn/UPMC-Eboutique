@@ -45,4 +45,24 @@ class ProductManager {
 
         return $result;
     }
+
+    // Return an array of products by the type given
+    public function getProductByType($type) {
+        $result = array();
+
+        $req = $this->db->prepare(
+            'SELECT *
+            FROM product
+            WHERE type=:type
+            ORDER BY id DESC
+        ');
+
+        $req->execute(
+            array('type' => $type)
+        );
+
+        $result = $req->fetchAll(); //get all
+
+        return $result;
+    }
 }
