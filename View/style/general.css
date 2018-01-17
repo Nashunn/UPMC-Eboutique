@@ -108,7 +108,8 @@ table td, table th {
 }
 
 /* Forms */
-.form textarea, .form input[type="text"], .form input[type="password"], .form input[type="email"], .form input[type="file"] {
+.form textarea, option, select, .form input[type="text"], .form input[type="password"],
+.form input[type="email"], .form input[type="file"], .form input[type="number"] {
 	width: 60%;
 	padding: 5px 15px;
 	margin-bottom: 10px;
@@ -120,11 +121,17 @@ table td, table th {
 	color: #333;
 }
 
-.form textarea:focus, .form input[type="text"]:focus, .form input[type="password"]:focus, .form input[type="email"]:focus, .form input[type="file"] {
+.form textarea:focus, option, select, .form input[type="text"]:focus, .form input[type="password"]:focus,
+.form input[type="email"]:focus, .form input[type="file"]:focus, .form input[type="number"]:focus {
 	border: 1px solid #707070;
 }
 
 .form textarea {
 	resize: vertical;
 	height: 150px;
+}
+
+option, select{
+	width: 65%;
+	padding: 2px 15px;
 }

@@ -1,3 +1,13 @@
+<?php
+$pdoBuilder = new Connection();
+$db = $pdoBuilder->getDb();
+
+require_once('./model/UserManager.php');
+require_once('./model/ProductManager.php');
+$userManager = new UserManager($db);
+$productManager = new ProductManager($db);
+?>
+
 <header>
     <div id="info-bar">
         <p>The first platform of ECO-MMERCE</p>

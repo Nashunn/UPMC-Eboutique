@@ -2,7 +2,6 @@
 class adminController {
     private $userManager;
 
-
     public function __construct($db) {
         require('./model/User.php');
         require_once('./model/UserManager.php');
@@ -16,6 +15,8 @@ class adminController {
 
         if($user && $user['admin'] == true) {
             $page = 'adminPanel';
+            $usersList = $this->userManager->findAll();
+            $usersNb = $this->userManager->countAll();
         }
         else {
             header("Location: ./index.php?ctrl=user&action=unauthorized");
