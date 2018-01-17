@@ -12,5 +12,5 @@ Installation
 Clone the project in your server repository with the following command :
 `$ git clone https://github.com/Nashunn/UPMC-Eboutique.git`
 
-You will need to import the MySQL database on your server using the file `database.sql` from the repository.
-By default the database name is `upmc`.
+You will need to import the MySQL database on your server using the file `upmc.sql` from the repository.
+By default the database name is `eboutique`.
