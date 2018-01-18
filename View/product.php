@@ -1,4 +1,5 @@
 <div id="product-box">
+    <h2 class="padding-left-10px"><?php echo $title; ?></h2>
 <?php
 if(isset($listProducts) && !empty($listProducts)) {
     foreach($listProducts as $item) {

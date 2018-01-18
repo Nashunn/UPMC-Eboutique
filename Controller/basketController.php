@@ -27,8 +27,9 @@ class basketController {
         $product = $this->productManager->findOne($id);
 
         if(!empty($product) && isset($_SESSION['user']['basket']))
-            $_SESSION['user']['basket'][] = $product;
+            $_SESSION['user']['basket'][] = array("product"=>$product, "quantity"=>1);
 
+        header("Location: ./index.php?ctrl=basket&action=consult");
         require('./View/default.php');
     }
 
@@ -37,8 +38,12 @@ class basketController {
      */
     public function addBox() {
         $page = 'basket';
-        $product = 'box';
+        $product = array("name"=>'Box', "price"=>50);
 
+        if(isset($_SESSION['user']['basket']))
+            $_SESSION['user']['basket'][] = array("product"=>$product, "quantity"=>1);
+
+        header("Location: ./index.php?ctrl=basket&action=consult");
         require('./View/default.php');
     }
 }

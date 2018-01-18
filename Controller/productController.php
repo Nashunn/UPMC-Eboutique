@@ -75,6 +75,7 @@ class productController {
      */
     public function all() {
         $page = 'product';
+        $title = 'All products';
 
         $listProducts = $this->productManager->getAllProducts();
 
@@ -87,6 +88,7 @@ class productController {
     public function trees() {
         $page = 'product';
         $type = 'tree';
+        $title = 'Trees';
 
         $listProducts = $this->productManager->getProductByType($type);
 
@@ -99,6 +101,7 @@ class productController {
     public function seeds() {
         $page = 'product';
         $type = 'seed';
+        $title = 'Seeds';
 
         $listProducts = $this->productManager->getProductByType($type);
 
@@ -111,6 +114,7 @@ class productController {
     public function plants() {
         $page = 'product';
         $type = 'plant';
+        $title = 'Plants';
 
         $listProducts = $this->productManager->getProductByType($type);
 
@@ -123,6 +127,7 @@ class productController {
     public function bouquets() {
         $page = 'product';
         $type = 'bouquet';
+        $title = 'Bouquets';
 
         $listProducts = $this->productManager->getProductByType($type);
 
@@ -135,6 +140,7 @@ class productController {
     public function fruits() {
         $page = 'product';
         $type = 'fruit';
+        $title = 'Fruits';
 
         $listProducts = $this->productManager->getProductByType($type);
 
