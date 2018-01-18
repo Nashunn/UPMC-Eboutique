@@ -144,6 +144,6 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e6e3f', endColorstr='#0f3f29',GradientType=0 );
 }
 
-#newItems .item>a>.add-btn:hover, #product-box .item>a>.add-btn {
+#newItems .item>a>.add-btn:hover, #product-box .item>a>.add-btn:hover {
     text-decoration: underline;
 }

@@ -82,4 +82,25 @@ class ProductManager {
 
         return $result;
     }
+
+    //Find one product by its id
+    public function findOne($id) {
+        $product = null;
+
+        $req = $this->db->prepare(
+	    'SELECT *
+        FROM product
+        WHERE id=:id');
+
+        $req->execute(
+            array(
+                'id' => $id,
+            )
+        );
+
+        $product = $req->fetch(); //get the first user
+
+        return $product;
+    }
+
 }

@@ -6,6 +6,7 @@
         }
     ?>
         <p>TODO : basket</p>
+        <p><?php print_r($_SESSION['user']['basket']); ?></p>
     <?php
     }
     else {

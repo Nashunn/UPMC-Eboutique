@@ -1,7 +1,11 @@
 <?php
 class basketController {
     public function __construct($db) {
+        require('./model/Product.php');
+        require_once('./model/ProductManager.php');
+
         $this->db = $db;
+        $this->productManager = new ProductManager($db);
     }
 
     /**
@@ -18,7 +22,12 @@ class basketController {
      */
     public function add() {
         $page = 'basket';
-        $product = $_GET['id'];
+        $id = $_GET['id'];
+
+        $product = $this->productManager->findOne($id);
+
+        if(!empty($product) && isset($_SESSION['user']['basket']))
+            $_SESSION['user']['basket'][] = $product;
 
         require('./View/default.php');
     }
