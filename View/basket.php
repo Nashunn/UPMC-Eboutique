@@ -7,19 +7,18 @@
         foreach ($_SESSION['user']['basket'] as $item) {
         ?>
             <div class="item">
-                <span class="name"><?php echo $item['product']['name']; ?></span>
-                <input type="hidden" name="name" value="<?php echo $item['product']['name']; ?>">
+                <span class="name"><img src="<?php echo $item['product']['imgLink']; ?>" class="logo" alt="logo"><?php echo $item['product']['name']; ?></span>
+                <input type="hidden" name="name[]" value="<?php echo $item['product']['name']; ?>">
                 <span class="price"><?php echo $item['product']['price']." $"; ?></span>
-                <input type="hidden" name="price" value="<?php echo $item['product']['price']; ?>">
-                <input class="quantity" type="number" value="<?php echo $item['quantity']; ?>">
+                <input type="hidden" name="price[]" value="<?php echo $item['product']['price']; ?>">
+                <input class="quantity" type="number" name="quantity[]" value="<?php echo $item['quantity']; ?>">
             </div>
         <?php
         }
         ?>
         </div>
         <div class="wrapper-50 margin-auto center">
-            <a class="submit-btn">Save</a>
-            <a class="submit-btn">Pay</a>
+            <a class="submit-btn">Save & Pay</a>
         </div>
         <?php
 

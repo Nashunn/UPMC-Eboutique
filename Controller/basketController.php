@@ -26,8 +26,14 @@ class basketController {
 
         $product = $this->productManager->findOne($id);
 
-        if(!empty($product) && isset($_SESSION['user']['basket']))
-            $_SESSION['user']['basket'][] = array("product"=>$product, "quantity"=>1);
+        $productInBasket = $this->inBasket($id); //check if the product is in the basket
+
+        if(!empty($product) && isset($_SESSION['user']['basket'])) {
+            if ($productInBasket)
+                $_SESSION['user']['basket'][$id]['quantity']++;
+            else
+                $_SESSION['user']['basket'][$id] = array("product" => $product, "quantity" => 1);
+        }
 
         header("Location: ./index.php?ctrl=basket&action=consult");
         require('./View/default.php');
@@ -38,12 +44,31 @@ class basketController {
      */
     public function addBox() {
         $page = 'basket';
-        $product = array("name"=>'Box', "price"=>50);
+        $product = array("name"=>'Box', "price"=>50, "imgLink"=>"./View/img/box.png");
+        $id = -1;
 
-        if(isset($_SESSION['user']['basket']))
-            $_SESSION['user']['basket'][] = array("product"=>$product, "quantity"=>1);
+        $productInBasket = $this->inBasket($id); //check if the product is in the basket
+
+        if(!empty($product) && isset($_SESSION['user']['basket'])) {
+            if ($productInBasket)
+                $_SESSION['user']['basket'][$id]['quantity']++;
+            else
+                $_SESSION['user']['basket'][$id] = array("product" => $product, "quantity" => 1);
+        }
 
         header("Location: ./index.php?ctrl=basket&action=consult");
         require('./View/default.php');
+    }
+
+    /**
+     * Check if a product is already in the basket, if yes return true and false if not
+     */
+    public function inBasket($id) {
+        foreach ($_SESSION['user']['basket'] as $itemID => $item) {
+            if($itemID == $id)
+                return true;
+        }
+
+        return false;
     }
 }

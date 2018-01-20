@@ -155,9 +155,19 @@
     flex-flow: row wrap;
     background: #fff;
     margin: 15px 0;
+    padding: 10px;
 }
 
 #basket-zone .item>span {
     display: inline-block;
     padding: 5px;
+    width: 20%
+}
+#basket-zone .item>span>img {
+    position: relative;
+    top: 2px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
 }
