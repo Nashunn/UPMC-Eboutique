@@ -13,8 +13,22 @@ class basketController {
      */
     public function consult() {
         $page = 'basket';
+        $totalBasket = $this->calculateTotal();
 
         require('./View/default.php');
+    }
+
+    /**
+     * Calculate the total for the basket
+     */
+    public function calculateTotal() {
+        $result = 0;
+
+        if(isset($_SESSION['user']['basket']))
+            foreach ($_SESSION['user']['basket'] as $item)
+                $result += $item['product']['price']*$item['quantity'];
+
+        return $result;
     }
 
     /**
@@ -44,8 +58,9 @@ class basketController {
      */
     public function addBox() {
         $page = 'basket';
-        $product = array("name"=>'Box', "price"=>50, "imgLink"=>"./View/img/box.png");
         $id = -1;
+        $product = array("id"=>$id, "name"=>'Box', "price"=>50, "imgLink"=>"./View/img/box.png");
+
 
         $productInBasket = $this->inBasket($id); //check if the product is in the basket
 
@@ -70,5 +85,52 @@ class basketController {
         }
 
         return false;
+    }
+
+    /**
+     * Save the information in the basket page
+     */
+    public function save() {
+        $page = 'basket';
+        $newbasket = $_POST;
+
+        for($i = 0; $i<sizeof($newbasket['id']); $i++) {
+            if ($newbasket['quantity'][$i] <= 0)
+                unset($_SESSION['user']['basket'][$newbasket['id'][$i]]);
+            else
+                $_SESSION['user']['basket'][$newbasket['id'][$i]]['quantity'] = $newbasket['quantity'][$i];
+        }
+
+        //if the user wants to pay
+        if($_POST['pay']) {
+            $this->pay();
+            header("Location: ./index.php?ctrl=basket&action=pay");
+        }
+        else
+            header("Location: ./index.php?ctrl=basket&action=consult");
+
+        require('./View/default.php');
+    }
+
+    /**
+     * Display the page to pay
+     */
+    public function pay() {
+        $page = 'pay';
+
+        require('./View/default.php');
+    }
+
+    /**
+     * Delete an item from the basket
+     */
+    public function delete() {
+        $page = 'pay';
+
+        if(isset($_GET['id']) && isset($_SESSION['user']['basket']))
+            unset($_SESSION['user']['basket'][$_GET['id']]);
+
+        header("Location: ./index.php?ctrl=basket&action=consult");
+        require('./View/default.php');
     }
 }

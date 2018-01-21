@@ -1,0 +1,1 @@
+<p>This function wasn't asked in the current version</p>
